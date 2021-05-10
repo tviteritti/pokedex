@@ -1,11 +1,7 @@
 <?php
  session_start();
-
-    $usuario="root";
-	$password="291121okayj";
-	$servidor="localhost";
-	$nombrebasedatos="pokedex";
-	$con= new mysqli($servidor,$usuario,$password,$nombrebasedatos)or die("error de conexion".mysql_error());
+ include('conexion.php');
+   
 
 if(isset($_SESSION['usuario'])){
 
@@ -29,7 +25,7 @@ if(isset($_SESSION['usuario'])){
 	<header  class="d-flex flex-col">
 	  <section class="d-flex flex-row mb-5 col-6 mt-3">
 		<div class="logo col-2 mx-2">
-			<img src="img/logo/logo.png" width="50" height="50">
+			<img src="recursos/img/logo/logo.png" width="50" height="50">
 		</div>
 		<div class="text-center d-inline-flex col-4 mx-5">
 			<h1 class="text-center">POKEDEX</h1>

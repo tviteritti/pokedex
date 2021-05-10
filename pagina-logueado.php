@@ -1,11 +1,7 @@
 <?php
 session_start();
 include('header-con-sesion.php');
-  $usuario="root";
-  $password="291121okayj";
-  $servidor="localhost";
-  $nombrebasedatos="pokedex";
-  $con= new mysqli($servidor,$usuario,$password,$nombrebasedatos)or die("error de conexion".mysql_error());
+include('conexion.php');
 ?>
 
 	<section class="d-flex flex-col mb-3 col">
@@ -36,7 +32,7 @@ include('header-con-sesion.php');
       $result = $con->query($sql);
       $resultArray=$result->fetch_all(MYSQLI_ASSOC);
        foreach($resultArray as $fila){
-          echo"<img src=".$fila["imagen"]." style='width: 5rem; height: 80px'>";
+         echo"<a href='http://localhost:8080/tp-pokedex/pokemons-detalle.php?imagen=".$fila["imagen"]."'>"."<img src=".$fila["imagen"]." style='width: 5rem; height: 80px'></a>";
        }
         
 
