@@ -17,7 +17,7 @@
             <a class="nav-link" href="logout.php">cerrar sesion <span class="sr-only">(current)</span></a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0" action="paginaPrincipal.php" method="GET">
+        <form class="form-inline my-2 my-lg-0" action="#" method="GET">
           <input class="form-control mr-sm-2" type="text" placeholder="Search" name="nombrePokemon">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Quien es este pokemon</button>
         </form>
