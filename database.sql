@@ -9,7 +9,7 @@ primary key (id));
 
 INSERT INTO `login` (`id`, `usuario`, `password`) VALUES ('1', 'admin', '12345');
 
-create table Pokemons(
+create table pokemon(
 id int,
 nombre varchar(20),
 tipo varchar(20),
@@ -91,4 +91,4 @@ Poseen la facultad de volar gracias a la luz de la luna, la cual recolectan. Viv
 
 Se dice que provienen del espacio exterior al igual que Deoxys, más específicamente de la luna. Es además muy difícil encontrarlos en la naturaleza, porque huyen de la gente. Les gusta bailar en las noches de luna llena alrededor de meteoritos o enormes rocas lunares para poder evolucionar.
 
-Este Pokémon suele ser visto en las montañas, por esto mismo se dice que sus naves caen en estos lugares. No obstante, su hábitat natural es el espacio, de donde se dice que proceden. El mejor sitio para verlo es el Monte Moon, donde bailan para adorar a la Piedra lunar.'),;
+Este Pokémon suele ser visto en las montañas, por esto mismo se dice que sus naves caen en estos lugares. No obstante, su hábitat natural es el espacio, de donde se dice que proceden. El mejor sitio para verlo es el Monte Moon, donde bailan para adorar a la Piedra lunar.');
