@@ -1,22 +1,25 @@
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>POKEDEX</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
- 	
-</head>
-<body>
+<?php
 
-	<header  class="d-flex flex-col">
-	  <section class="d-flex flex-row mb-5 col-6 mt-3">
-		<div class="logo col-2 mx-2">
-			<img src="img/logo/logo.png" width="50" height="50">
-		</div>
-		<div class="text-center d-inline-flex col-4 mx-5">
-			<h1 class="text-center">POKEDEX</h1>
-		</div>
-	  </section>
-   <form action="logout.php" class="form-control" method="post">
-    <button type="submit" class="btn btn-primary">cerrar sesion</button>
-   </form>
-	</header>
+//if( !isset($_SESSION["usuario"]) ){
+//    header("location:index.php");
+//   exit();
+//}
+?>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.php"><img src="recursos/img/logo/logo.png" width="50" height="50"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="logout.php">cerrar sesion <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="paginaPrincipal.php" method="GET">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" name="nombrePokemon">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Quien es este pokemon</button>
+        </form>
+      </div>
+</nav>
