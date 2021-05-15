@@ -74,14 +74,13 @@ if(isset($_SESSION['usuario'])){
       <td>
       	<?php 
    
-			$sql = "select t.descripcion 
-			 		from tipo t inner join 
-			 		pokemons p on p.tipo=t.id
+			$sql = "select p.tipo 
+			 		from pokemons p
 			 		where p.nombre like '%pikachu%'";
 			$result = $con->query($sql);
 			$resultArray=$result->fetch_all(MYSQLI_ASSOC);
 			 foreach($resultArray as $fila){
-			 	    $tipo=$fila["descripcion"];
+			 	    $tipo=$fila["tipo"];
 					echo $tipo;
 			 }
 				
@@ -109,7 +108,7 @@ if(isset($_SESSION['usuario'])){
    
 			 $sql = "select p.nombre 
 			 		from  pokemons p 
-			 		where p.id=1";
+			 		where p.id=22";
 			$result = $con->query($sql);
 			$resultArray=$result->fetch_all(MYSQLI_ASSOC);
 			 foreach($resultArray as $fila){
@@ -138,14 +137,13 @@ if(isset($_SESSION['usuario'])){
       </th>
       <td><?php 
    
-			$sql = "select t.descripcion 
-			 		from tipo t inner join 
-			 		pokemons p on p.tipo=t.id
+			$sql = "select p.tipo 
+			 		from pokemons p
 			 		where p.nombre like '%squirtle%'";
 			$result = $con->query($sql);
 			$resultArray=$result->fetch_all(MYSQLI_ASSOC);
 			 foreach($resultArray as $fila){
-			 	    $tipo=$fila["descripcion"];
+			 	    $tipo=$fila["tipo"];
 					echo $tipo;
 			 }
 				
@@ -172,7 +170,7 @@ if(isset($_SESSION['usuario'])){
    
 			 $sql = "select p.nombre 
 			 		from  pokemons p 
-			 		where p.id=2";
+			 		where p.id=26";
 			$result = $con->query($sql);
 			$resultArray=$result->fetch_all(MYSQLI_ASSOC);
 			 foreach($resultArray as $fila){
